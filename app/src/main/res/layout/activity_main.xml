@@ -12,7 +12,7 @@
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/actionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -221,5 +221,48 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/actionBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_action_bar"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/screen_padding"
+        android:paddingTop="@dimen/action_bar_padding"
+        android:paddingEnd="@dimen/screen_padding"
+        android:paddingBottom="@dimen/action_bar_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonShoppingList"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/action_button_height"
+            android:layout_weight="1"
+            android:onClick="toggleShoppingList"
+            android:text="@string/shopping_add"
+            android:textColor="@color/herb"
+            android:textSize="@dimen/text_body"
+            app:cornerRadius="@dimen/card_radius"
+            app:strokeColor="@color/herb" />
+
+        <Space
+            android:layout_width="@dimen/card_gap"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/buttonCooking"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/action_button_height"
+            android:layout_weight="1"
+            android:backgroundTint="@color/tomato"
+            android:text="@string/cooking_start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"
+            app:cornerRadius="@dimen/card_radius" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

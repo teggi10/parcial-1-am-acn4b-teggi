@@ -22,4 +22,14 @@
     <string name="ingredients_title">Ingredientes</string>
     <string name="symbol_half">½</string>
     <string name="quantity_with_half">%1$d ½</string>
+
+    <string name="shopping_add">Agregar a compras</string>
+    <string name="shopping_added">En compras ✓</string>
+    <string name="shopping_removed">Se quitaron de la lista de compras</string>
+    <string name="shopping_nothing_missing">Ya tenés todos los ingredientes</string>
+    <plurals name="shopping_added_toast">
+        <item quantity="one">Se agregó %1$d ingrediente a la lista de compras</item>
+        <item quantity="other">Se agregaron %1$d ingredientes a la lista de compras</item>
+    </plurals>
+    <string name="cooking_start">Empezar a cocinar</string>
 </resources>
