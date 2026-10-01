@@ -3,8 +3,10 @@ package ar.edu.davinci.fogon;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,9 +20,33 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public final int BASE_PORTIONS = 12;
+    public final int MIN_PORTIONS = 1;
+    public final int MAX_PORTIONS = 48;
 
     public int portions = BASE_PORTIONS;
     public List<Ingredient> ingredients = new ArrayList<>();
+
+    public void decreasePortions(View view) {
+        if (portions <= MIN_PORTIONS) return;
+        portions--;
+        updatePortions();
+    }
+
+    public void increasePortions(View view) {
+        if (portions >= MAX_PORTIONS) return;
+        portions++;
+        updatePortions();
+    }
+
+    private void updatePortions() {
+        TextView portionsCount = findViewById(R.id.portionsCount);
+        portionsCount.setText(String.valueOf(portions));
+
+        findViewById(R.id.buttonLessPortions).setEnabled(portions > MIN_PORTIONS);
+        findViewById(R.id.buttonMorePortions).setEnabled(portions < MAX_PORTIONS);
+
+        renderIngredients();
+    }
 
     private void loadIngredients() {
         ingredients.add(new Ingredient(12, R.plurals.ingredient_dough));
