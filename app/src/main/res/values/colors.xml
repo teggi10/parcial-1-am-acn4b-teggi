@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#FFFAFAF7</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="ink">#FF1D1F1C</color>
+    <color name="muted">#FF5E625B</color>
+    <color name="divider">#FFE4E2DC</color>
+
+    <color name="herb">#FF2F5D3A</color>
+    <color name="herb_dark">#FF1F4128</color>
+    <color name="herb_soft">#FFE6EEE6</color>
+    <color name="herb_soft_text">#FF3D4A3E</color>
+    <color name="tomato">#FFC4491F</color>
+    <color name="crust">#FFE8DCCB</color>
 </resources>
