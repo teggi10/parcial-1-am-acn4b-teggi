@@ -50,4 +50,7 @@
         <item quantity="other">Se agregaron %1$d ingredientes a la lista de compras</item>
     </plurals>
     <string name="cooking_start">Empezar a cocinar</string>
+    <string name="cooking_next">Siguiente paso (%1$d/%2$d)</string>
+    <string name="cooking_finish">Terminar</string>
+    <string name="cooking_done_toast">¡Listo! Buen provecho</string>
 </resources>

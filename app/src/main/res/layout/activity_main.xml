@@ -323,6 +323,7 @@
             android:layout_height="@dimen/action_button_height"
             android:layout_weight="1"
             android:backgroundTint="@color/tomato"
+            android:onClick="nextCookingStep"
             android:text="@string/cooking_start"
             android:textColor="@color/white"
             android:textSize="@dimen/text_body"
