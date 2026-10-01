@@ -11,4 +11,11 @@
     <string name="info_difficulty_value">Media</string>
     <string name="info_calories_label">Calorías</string>
     <string name="info_calories_value">290 / u.</string>
+
+    <string name="portions_label">Porciones</string>
+    <string name="portions_default">12</string>
+    <string name="portions_less">Menos porciones</string>
+    <string name="portions_more">Más porciones</string>
+    <string name="symbol_less">–</string>
+    <string name="symbol_more">+</string>
 </resources>

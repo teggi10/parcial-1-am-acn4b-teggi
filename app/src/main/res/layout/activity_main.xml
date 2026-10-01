@@ -142,6 +142,65 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/portionsSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/section_spacing"
+                android:background="@drawable/bg_surface_card"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/card_padding">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/portions_label"
+                    android:textColor="@color/ink"
+                    android:textSize="@dimen/text_subtitle"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/buttonLessPortions"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="@dimen/round_button_size"
+                    android:layout_height="@dimen/round_button_size"
+                    android:contentDescription="@string/portions_less"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    android:text="@string/symbol_less"
+                    android:textColor="@color/ink"
+                    android:textSize="@dimen/text_subtitle"
+                    app:cornerRadius="@dimen/round_button_radius"
+                    app:strokeColor="@color/divider" />
+
+                <TextView
+                    android:id="@+id/portionsCount"
+                    android:layout_width="@dimen/portions_count_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/portions_default"
+                    android:textColor="@color/ink"
+                    android:textSize="@dimen/text_counter"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/buttonMorePortions"
+                    android:layout_width="@dimen/round_button_size"
+                    android:layout_height="@dimen/round_button_size"
+                    android:backgroundTint="@color/herb"
+                    android:contentDescription="@string/portions_more"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    android:text="@string/symbol_more"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_subtitle"
+                    app:cornerRadius="@dimen/round_button_radius" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

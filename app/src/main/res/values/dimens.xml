@@ -8,8 +8,15 @@
     <dimen name="text_title">28sp</dimen>
     <dimen name="text_body">15sp</dimen>
     <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_subtitle">18sp</dimen>
+    <dimen name="text_counter">20sp</dimen>
 
     <dimen name="card_radius">14dp</dimen>
     <dimen name="card_padding">12dp</dimen>
     <dimen name="card_gap">8dp</dimen>
+    <dimen name="card_stroke">1dp</dimen>
+
+    <dimen name="round_button_size">48dp</dimen>
+    <dimen name="round_button_radius">24dp</dimen>
+    <dimen name="portions_count_width">56dp</dimen>
 </resources>
