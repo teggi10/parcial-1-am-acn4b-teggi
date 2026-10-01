@@ -5,9 +5,11 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +27,38 @@ public class MainActivity extends AppCompatActivity {
     public final int MAX_PORTIONS = 48;
 
     public int portions = BASE_PORTIONS;
+    public boolean inShoppingList = false;
     public List<Ingredient> ingredients = new ArrayList<>();
+
+    public void toggleShoppingList(View view) {
+        Button button = (Button) view;
+
+        if (inShoppingList) {
+            inShoppingList = false;
+            button.setText(R.string.shopping_add);
+            Toast.makeText(this, R.string.shopping_removed, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        int missing = countMissingIngredients();
+        if (missing == 0) {
+            Toast.makeText(this, R.string.shopping_nothing_missing, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        inShoppingList = true;
+        button.setText(R.string.shopping_added);
+        String message = getResources().getQuantityString(R.plurals.shopping_added_toast, missing, missing);
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    private int countMissingIngredients() {
+        int missing = 0;
+        for (Ingredient ingredient : ingredients) {
+            if (!ingredient.isChecked() && !ingredient.isToTaste()) missing++;
+        }
+        return missing;
+    }
 
     public void decreasePortions(View view) {
         if (portions <= MIN_PORTIONS) return;
