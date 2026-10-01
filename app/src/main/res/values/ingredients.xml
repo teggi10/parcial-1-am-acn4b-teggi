@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="ingredient_dough">
+        <item quantity="one">%1$s tapa de empanada</item>
+        <item quantity="other">%1$s tapas de empanada</item>
+    </plurals>
+    <plurals name="ingredient_beef">
+        <item quantity="one">%1$s g de carne de nalga</item>
+        <item quantity="other">%1$s g de carne de nalga</item>
+    </plurals>
+    <plurals name="ingredient_onion">
+        <item quantity="one">%1$s cebolla mediana</item>
+        <item quantity="other">%1$s cebollas medianas</item>
+    </plurals>
+    <plurals name="ingredient_pepper">
+        <item quantity="one">%1$s morrón rojo</item>
+        <item quantity="other">%1$s morrones rojos</item>
+    </plurals>
+    <plurals name="ingredient_potato">
+        <item quantity="one">%1$s papa</item>
+        <item quantity="other">%1$s papas</item>
+    </plurals>
+    <plurals name="ingredient_egg">
+        <item quantity="one">%1$s huevo</item>
+        <item quantity="other">%1$s huevos</item>
+    </plurals>
+    <plurals name="ingredient_green_onion">
+        <item quantity="one">%1$s cebolla de verdeo</item>
+        <item quantity="other">%1$s cebollas de verdeo</item>
+    </plurals>
+    <plurals name="ingredient_lard">
+        <item quantity="one">%1$s cda. de grasa vacuna</item>
+        <item quantity="other">%1$s cdas. de grasa vacuna</item>
+    </plurals>
+    <plurals name="ingredient_cumin">
+        <item quantity="one">%1$s cdita. de comino</item>
+        <item quantity="other">%1$s cditas. de comino</item>
+    </plurals>
+    <plurals name="ingredient_paprika">
+        <item quantity="one">%1$s cda. de pimentón dulce</item>
+        <item quantity="other">%1$s cdas. de pimentón dulce</item>
+    </plurals>
+    <plurals name="ingredient_salt">
+        <item quantity="one">Sal y ají molido a gusto</item>
+        <item quantity="other">Sal y ají molido a gusto</item>
+    </plurals>
+</resources>
