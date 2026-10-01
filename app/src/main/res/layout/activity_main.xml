@@ -201,6 +201,22 @@
                     app:cornerRadius="@dimen/round_button_radius" />
             </LinearLayout>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/section_spacing"
+                android:text="@string/ingredients_title"
+                android:textColor="@color/ink"
+                android:textSize="@dimen/text_section"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ingredientsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_spacing"
+                android:orientation="vertical" />
+
         </LinearLayout>
     </ScrollView>
 

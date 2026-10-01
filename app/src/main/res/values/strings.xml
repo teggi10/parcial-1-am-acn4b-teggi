@@ -18,4 +18,8 @@
     <string name="portions_more">Más porciones</string>
     <string name="symbol_less">–</string>
     <string name="symbol_more">+</string>
+
+    <string name="ingredients_title">Ingredientes</string>
+    <string name="symbol_half">½</string>
+    <string name="quantity_with_half">%1$d ½</string>
 </resources>
