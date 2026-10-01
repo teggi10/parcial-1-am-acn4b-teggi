@@ -14,6 +14,8 @@
 
     <dimen name="hero_height">260dp</dimen>
     <dimen name="row_min_height">48dp</dimen>
+    <dimen name="step_number_size">32dp</dimen>
+    <dimen name="step_gap">12dp</dimen>
     <dimen name="action_bar_padding">12dp</dimen>
     <dimen name="action_button_height">56dp</dimen>
 

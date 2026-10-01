@@ -2,8 +2,10 @@ package ar.edu.davinci.fogon;
 
 import android.content.res.ColorStateList;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -171,6 +173,40 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void renderSteps() {
+        LinearLayout container = findViewById(R.id.stepsContainer);
+        String[] steps = getResources().getStringArray(R.array.recipe_steps);
+        int padding = getResources().getDimensionPixelSize(R.dimen.card_padding);
+        int numberSize = getResources().getDimensionPixelSize(R.dimen.step_number_size);
+        int gap = getResources().getDimensionPixelSize(R.dimen.step_gap);
+
+        for (int i = 0; i < steps.length; i++) {
+            LinearLayout row = new LinearLayout(this);
+            row.setOrientation(LinearLayout.HORIZONTAL);
+            row.setPadding(padding, padding, padding, padding);
+
+            TextView number = new TextView(this);
+            number.setText(String.valueOf(i + 1));
+            number.setGravity(Gravity.CENTER);
+            number.setTypeface(Typeface.DEFAULT_BOLD);
+            number.setTextColor(ContextCompat.getColor(this, R.color.herb_dark));
+            number.setBackgroundResource(R.drawable.bg_step_number);
+            row.addView(number, new LinearLayout.LayoutParams(numberSize, numberSize));
+
+            TextView text = new TextView(this);
+            text.setText(steps[i]);
+            text.setTextColor(ContextCompat.getColor(this, R.color.ink));
+            text.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_body));
+            LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(
+                    0, LinearLayout.LayoutParams.WRAP_CONTENT, 1
+            );
+            textParams.setMarginStart(gap);
+            row.addView(text, textParams);
+
+            container.addView(row);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -184,5 +220,6 @@ public class MainActivity extends AppCompatActivity {
 
         loadIngredients();
         renderIngredients();
+        renderSteps();
     }
 }

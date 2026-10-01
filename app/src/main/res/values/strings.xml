@@ -30,6 +30,17 @@
     <string name="symbol_half">½</string>
     <string name="quantity_with_half">%1$d ½</string>
 
+    <string name="steps_title">Preparación</string>
+    <string-array name="recipe_steps">
+        <item>Hervir los huevos 10 minutos, enfriarlos y picarlos. Reservar.</item>
+        <item>Cortar la carne a cuchillo en cubos pequeños.</item>
+        <item>Rehogar la cebolla y el morrón picados en la grasa, 8 minutos a fuego medio.</item>
+        <item>Agregar la carne, el comino y el pimentón. Cocinar 5 minutos sin que se seque.</item>
+        <item>Sumar la papa hervida en cubos y la cebolla de verdeo. Dejar enfriar el relleno.</item>
+        <item>Rellenar las tapas, agregar huevo picado y repulgar.</item>
+        <item>Hornear a 220 °C durante 15 minutos, hasta que estén doradas.</item>
+    </string-array>
+
     <string name="shopping_add">Agregar a compras</string>
     <string name="shopping_added">En compras ✓</string>
     <string name="shopping_removed">Se quitaron de la lista de compras</string>
