@@ -75,3 +75,7 @@ Los mockups de todas las pantallas, con sus flujos, se hicieron en un canvas de 
 ## Convención de commits
 
 Se usa [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/): `feat:`, `refactor:`, `docs:`, `chore:`.
+
+## Créditos
+
+Foto de las empanadas: [Empanadas salteñas 1.jpg](https://commons.wikimedia.org/wiki/File:Empanadas_salte%C3%B1as_1.jpg), de Gorivero, con licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), vía Wikimedia Commons.
