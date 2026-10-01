@@ -1,6 +1,7 @@
 package ar.edu.davinci.fogon;
 
 import android.content.res.ColorStateList;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
@@ -92,12 +93,27 @@ public class MainActivity extends AppCompatActivity {
         for (Ingredient ingredient : ingredients) {
             CheckBox checkBox = new CheckBox(this);
             checkBox.setText(describeIngredient(ingredient));
-            checkBox.setTextColor(ContextCompat.getColor(this, R.color.ink));
             checkBox.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_body));
             checkBox.setMinHeight(getResources().getDimensionPixelSize(R.dimen.row_min_height));
             checkBox.setButtonTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.herb)));
             checkBox.setChecked(ingredient.isChecked());
+            applyCheckedStyle(checkBox, ingredient.isChecked());
+            checkBox.setOnCheckedChangeListener((button, isChecked) -> {
+                ingredient.setChecked(isChecked);
+                applyCheckedStyle(checkBox, isChecked);
+            });
             container.addView(checkBox);
+        }
+    }
+
+    private void applyCheckedStyle(CheckBox checkBox, boolean isChecked) {
+        int flags = checkBox.getPaintFlags();
+        if (isChecked) {
+            checkBox.setPaintFlags(flags | Paint.STRIKE_THRU_TEXT_FLAG);
+            checkBox.setTextColor(ContextCompat.getColor(this, R.color.muted));
+        } else {
+            checkBox.setPaintFlags(flags & ~Paint.STRIKE_THRU_TEXT_FLAG);
+            checkBox.setTextColor(ContextCompat.getColor(this, R.color.ink));
         }
     }
 
