@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="section_spacing">20dp</dimen>
+    <dimen name="text_spacing">6dp</dimen>
+
+    <dimen name="text_overline">13sp</dimen>
+    <dimen name="text_title">28sp</dimen>
+    <dimen name="text_body">15sp</dimen>
+</resources>

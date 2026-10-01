@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fogón</string>
+
+    <string name="recipe_category">Saladas · Norte argentino</string>
+    <string name="recipe_title">Empanadas salteñas</string>
+    <string name="recipe_description">Jugosas, con carne cortada a cuchillo, papa y huevo. Ideales para el horno de barro o el de casa.</string>
 </resources>
