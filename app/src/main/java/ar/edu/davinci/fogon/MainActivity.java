@@ -7,6 +7,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,27 @@ public class MainActivity extends AppCompatActivity {
 
     public int portions = BASE_PORTIONS;
     public boolean inShoppingList = false;
+    public boolean isFavorite = false;
     public List<Ingredient> ingredients = new ArrayList<>();
+
+    public void goBack(View view) {
+        finish();
+    }
+
+    public void toggleFavorite(View view) {
+        ImageButton button = (ImageButton) view;
+        isFavorite = !isFavorite;
+
+        if (isFavorite) {
+            button.setImageResource(R.drawable.ic_favorite);
+            button.setContentDescription(getString(R.string.favorite_remove));
+            Toast.makeText(this, R.string.favorite_added_toast, Toast.LENGTH_SHORT).show();
+        } else {
+            button.setImageResource(R.drawable.ic_favorite_border);
+            button.setContentDescription(getString(R.string.favorite_add));
+            Toast.makeText(this, R.string.favorite_removed_toast, Toast.LENGTH_SHORT).show();
+        }
+    }
 
     public void toggleShoppingList(View view) {
         Button button = (Button) view;
