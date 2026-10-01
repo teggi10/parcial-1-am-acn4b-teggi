@@ -34,6 +34,7 @@
                     android:background="@color/crust"
                     android:contentDescription="@string/hero_image_description"
                     android:scaleType="centerCrop"
+                    android:src="@drawable/recipe_empanadas"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
