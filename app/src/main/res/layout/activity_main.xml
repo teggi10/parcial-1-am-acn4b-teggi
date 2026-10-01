@@ -20,205 +20,253 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/screen_padding">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/recipeCategory"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/recipe_category"
-                android:textAllCaps="true"
-                android:textColor="@color/herb"
-                android:textSize="@dimen/text_overline"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/recipeTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_spacing"
-                android:text="@string/recipe_title"
-                android:textColor="@color/ink"
-                android:textSize="@dimen/text_title"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/recipeDescription"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/hero"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_spacing"
-                android:lineSpacingMultiplier="1.2"
-                android:text="@string/recipe_description"
-                android:textColor="@color/muted"
-                android:textSize="@dimen/text_body" />
+                android:layout_height="@dimen/hero_height">
 
-            <LinearLayout
-                android:id="@+id/infoCards"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/section_spacing"
-                android:orientation="horizontal">
-
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/heroImage"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_info_card"
-                    android:orientation="vertical"
-                    android:padding="@dimen/card_padding">
+                    android:layout_height="0dp"
+                    android:background="@color/crust"
+                    android:contentDescription="@string/hero_image_description"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/info_time_label"
-                        android:textColor="@color/herb_soft_text"
-                        android:textSize="@dimen/text_caption" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/info_time_value"
-                        android:textColor="@color/ink"
-                        android:textSize="@dimen/text_body"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="@dimen/card_gap"
-                    android:layout_height="0dp" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_info_card"
-                    android:orientation="vertical"
-                    android:padding="@dimen/card_padding">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/info_difficulty_label"
-                        android:textColor="@color/herb_soft_text"
-                        android:textSize="@dimen/text_caption" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/info_difficulty_value"
-                        android:textColor="@color/ink"
-                        android:textSize="@dimen/text_body"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="@dimen/card_gap"
-                    android:layout_height="0dp" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_info_card"
-                    android:orientation="vertical"
-                    android:padding="@dimen/card_padding">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/info_calories_label"
-                        android:textColor="@color/herb_soft_text"
-                        android:textSize="@dimen/text_caption" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/info_calories_value"
-                        android:textColor="@color/ink"
-                        android:textSize="@dimen/text_body"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/portionsSelector"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/section_spacing"
-                android:background="@drawable/bg_surface_card"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="@dimen/card_padding">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/portions_label"
-                    android:textColor="@color/ink"
-                    android:textSize="@dimen/text_subtitle"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/buttonLessPortions"
-                    style="@style/Widget.Material3.Button.OutlinedButton"
+                <ImageButton
+                    android:id="@+id/buttonBack"
                     android:layout_width="@dimen/round_button_size"
                     android:layout_height="@dimen/round_button_size"
-                    android:contentDescription="@string/portions_less"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:onClick="decreasePortions"
-                    android:padding="0dp"
-                    android:text="@string/symbol_less"
-                    android:textColor="@color/ink"
-                    android:textSize="@dimen/text_subtitle"
-                    app:cornerRadius="@dimen/round_button_radius"
-                    app:strokeColor="@color/divider" />
+                    android:layout_margin="@dimen/screen_padding"
+                    android:background="@drawable/bg_round_button"
+                    android:contentDescription="@string/back"
+                    android:onClick="goBack"
+                    android:src="@drawable/ic_arrow_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/portionsCount"
-                    android:layout_width="@dimen/portions_count_width"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/portions_default"
-                    android:textColor="@color/ink"
-                    android:textSize="@dimen/text_counter"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/buttonMorePortions"
+                <ImageButton
+                    android:id="@+id/buttonFavorite"
                     android:layout_width="@dimen/round_button_size"
                     android:layout_height="@dimen/round_button_size"
-                    android:backgroundTint="@color/herb"
-                    android:contentDescription="@string/portions_more"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:onClick="increasePortions"
-                    android:padding="0dp"
-                    android:text="@string/symbol_more"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/text_subtitle"
-                    app:cornerRadius="@dimen/round_button_radius" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/section_spacing"
-                android:text="@string/ingredients_title"
-                android:textColor="@color/ink"
-                android:textSize="@dimen/text_section"
-                android:textStyle="bold" />
+                    android:layout_margin="@dimen/screen_padding"
+                    android:background="@drawable/bg_round_button"
+                    android:contentDescription="@string/favorite_add"
+                    android:onClick="toggleFavorite"
+                    android:src="@drawable/ic_favorite_border"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
-                android:id="@+id/ingredientsContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_spacing"
-                android:orientation="vertical" />
+                android:orientation="vertical"
+                android:padding="@dimen/screen_padding">
 
+                <TextView
+                    android:id="@+id/recipeCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recipe_category"
+                    android:textAllCaps="true"
+                    android:textColor="@color/herb"
+                    android:textSize="@dimen/text_overline"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recipeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_spacing"
+                    android:text="@string/recipe_title"
+                    android:textColor="@color/ink"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recipeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_spacing"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="@string/recipe_description"
+                    android:textColor="@color/muted"
+                    android:textSize="@dimen/text_body" />
+
+                <LinearLayout
+                    android:id="@+id/infoCards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/section_spacing"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_info_card"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_padding">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_time_label"
+                            android:textColor="@color/herb_soft_text"
+                            android:textSize="@dimen/text_caption" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_time_value"
+                            android:textColor="@color/ink"
+                            android:textSize="@dimen/text_body"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="@dimen/card_gap"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_info_card"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_padding">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_difficulty_label"
+                            android:textColor="@color/herb_soft_text"
+                            android:textSize="@dimen/text_caption" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_difficulty_value"
+                            android:textColor="@color/ink"
+                            android:textSize="@dimen/text_body"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="@dimen/card_gap"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_info_card"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_padding">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_calories_label"
+                            android:textColor="@color/herb_soft_text"
+                            android:textSize="@dimen/text_caption" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_calories_value"
+                            android:textColor="@color/ink"
+                            android:textSize="@dimen/text_body"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/portionsSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/section_spacing"
+                    android:background="@drawable/bg_surface_card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/card_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/portions_label"
+                        android:textColor="@color/ink"
+                        android:textSize="@dimen/text_subtitle"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/buttonLessPortions"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="@dimen/round_button_size"
+                        android:layout_height="@dimen/round_button_size"
+                        android:contentDescription="@string/portions_less"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="decreasePortions"
+                        android:padding="0dp"
+                        android:text="@string/symbol_less"
+                        android:textColor="@color/ink"
+                        android:textSize="@dimen/text_subtitle"
+                        app:cornerRadius="@dimen/round_button_radius"
+                        app:strokeColor="@color/divider" />
+
+                    <TextView
+                        android:id="@+id/portionsCount"
+                        android:layout_width="@dimen/portions_count_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/portions_default"
+                        android:textColor="@color/ink"
+                        android:textSize="@dimen/text_counter"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/buttonMorePortions"
+                        android:layout_width="@dimen/round_button_size"
+                        android:layout_height="@dimen/round_button_size"
+                        android:backgroundTint="@color/herb"
+                        android:contentDescription="@string/portions_more"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="increasePortions"
+                        android:padding="0dp"
+                        android:text="@string/symbol_more"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_subtitle"
+                        app:cornerRadius="@dimen/round_button_radius" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/section_spacing"
+                    android:text="@string/ingredients_title"
+                    android:textColor="@color/ink"
+                    android:textSize="@dimen/text_section"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ingredientsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_spacing"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

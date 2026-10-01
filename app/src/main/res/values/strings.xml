@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Fogón</string>
 
+    <string name="hero_image_description">Empanadas salteñas recién horneadas</string>
+    <string name="back">Volver</string>
+    <string name="favorite_add">Marcar como favorita</string>
+    <string name="favorite_remove">Quitar de favoritas</string>
+    <string name="favorite_added_toast">Guardada en tus favoritas</string>
+    <string name="favorite_removed_toast">Quitada de tus favoritas</string>
+
     <string name="recipe_category">Saladas · Norte argentino</string>
     <string name="recipe_title">Empanadas salteñas</string>
     <string name="recipe_description">Jugosas, con carne cortada a cuchillo, papa y huevo. Ideales para el horno de barro o el de casa.</string>
