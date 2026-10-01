@@ -9,8 +9,11 @@ Fogón es una app de recetas caseras con foco en la cocina argentina. Permite de
 
 ## Mockups
 
-Los mockups de todas las pantallas, con sus flujos, se hicieron en un canvas de diseño:
-[Fogón — pantallas y flujos](https://claude.ai/artifact/4v6WoghhRseoGLTBdTs9eA)
+Mockups de las cinco pantallas de la app. Las imágenes están en [`docs/mockups`](mockups).
+
+| 1. Inicio | 2. Detalle de receta | 3. Modo cocina | 4. Nueva receta | 5. Lista de compras |
+|---|---|---|---|---|
+| ![Inicio](mockups/01-inicio.png) | ![Detalle de receta](mockups/02-detalle-receta.png) | ![Modo cocina](mockups/03-modo-cocina.png) | ![Nueva receta](mockups/04-nueva-receta.png) | ![Lista de compras](mockups/05-lista-compras.png) |
 
 ## Pantallas y flujo de uso
 
