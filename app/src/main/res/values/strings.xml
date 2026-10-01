@@ -4,4 +4,11 @@
     <string name="recipe_category">Saladas · Norte argentino</string>
     <string name="recipe_title">Empanadas salteñas</string>
     <string name="recipe_description">Jugosas, con carne cortada a cuchillo, papa y huevo. Ideales para el horno de barro o el de casa.</string>
+
+    <string name="info_time_label">Tiempo</string>
+    <string name="info_time_value">1 h 20 min</string>
+    <string name="info_difficulty_label">Dificultad</string>
+    <string name="info_difficulty_value">Media</string>
+    <string name="info_calories_label">Calorías</string>
+    <string name="info_calories_value">290 / u.</string>
 </resources>
